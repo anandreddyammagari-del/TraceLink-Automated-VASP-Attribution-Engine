@@ -1,0 +1,97 @@
+version: '3.8'
+
+services:
+  tracelink-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: tracelink-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OFFLINE_MODE=false
+      - DATABASE_URL=postgresql+asyncpg://tracelink_admin:police_secure_pass_2026@postgres:5432/tracelink_db
+      - REDIS_URL=redis://redis:6379/0
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=police_graph_secure_2026
+      - SECRET_KEY=tracelink_super_secret_forensic_jwt_signing_key_94bnss_2026
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    restart: unless-stopped
+
+  tracelink-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: tracelink-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - tracelink-backend
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: tracelink-postgres
+    environment:
+      POSTGRES_USER: tracelink_admin
+      POSTGRES_PASSWORD: police_secure_pass_2026
+      POSTGRES_DB: tracelink_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tracelink_admin -d tracelink_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: tracelink-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: tracelink-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: tracelink-kafka
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  neo4j:
+    image: neo4j:5.12-community
+    container_name: tracelink-neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/police_graph_secure_2026
+    volumes:
+      - neo4j_data:/data
+
+volumes:
+  postgres_data:
+  redis_data:
+  neo4j_data:

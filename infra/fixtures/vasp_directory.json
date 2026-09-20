@@ -1,0 +1,57 @@
+[
+  {
+    "vasp_name": "WazirX (Zanmai Labs Pvt Ltd)",
+    "country": "India",
+    "fiu_registered": true,
+    "deposit_clusters": [
+      "0x503828976d22510aad0201ac7ec88293211d23dc",
+      "0x279f3a888de832359e883729f99797749c12a144"
+    ],
+    "nodal_officer_email": "nodal@wazirx.com",
+    "compliance_portal": "https://wazirx.com/law-enforcement"
+  },
+  {
+    "vasp_name": "CoinDCX (Neblio Technologies Pvt Ltd)",
+    "country": "India",
+    "fiu_registered": true,
+    "deposit_clusters": [
+      "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "0x70997970c51812dc3a010c7d01b50e0d17dc79c8"
+    ],
+    "nodal_officer_email": "compliance@coindcx.com",
+    "compliance_portal": "https://coindcx.com/lea"
+  },
+  {
+    "vasp_name": "Binance Holdings Ltd",
+    "country": "International / Cayman Islands",
+    "fiu_registered": true,
+    "deposit_clusters": [
+      "0x28c6c06298d514db089934071355e5743bf21d60",
+      "0x21a31ee1afc51d94c2efccaa2092ad1028285549",
+      "0xdfd5293d8e347dfee59e53b210977e398eac9580"
+    ],
+    "nodal_officer_email": "caseprogress@binance.com",
+    "compliance_portal": "https://kodexglobal.com"
+  },
+  {
+    "vasp_name": "Bitbns (Buyhatke Internet Pvt Ltd)",
+    "country": "India",
+    "fiu_registered": true,
+    "deposit_clusters": [
+      "0x3cd751e6b0078be393132286c442345e5dc49699"
+    ],
+    "nodal_officer_email": "lea@bitbns.com",
+    "compliance_portal": "https://bitbns.com/lea"
+  },
+  {
+    "vasp_name": "Kraken (Payward Inc)",
+    "country": "United States",
+    "fiu_registered": false,
+    "deposit_clusters": [
+      "0x267be1c1d684f78cb4f6a176c4911b741e4ffdc0",
+      "0x0a869d79a7052c7f1b55a8ebabbea3420f0d1e13"
+    ],
+    "nodal_officer_email": "compliance@kraken.com",
+    "compliance_portal": "https://www.kraken.com/legal"
+  }
+]

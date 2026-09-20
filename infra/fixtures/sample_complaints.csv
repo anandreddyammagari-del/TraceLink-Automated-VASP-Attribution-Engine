@@ -1,0 +1,4 @@
+complaint_ref,complainant_name,contact_phone,destination_wallet_reported,loss_amount_inr,fraud_modality,incident_date
+NCRP/2026/DEL/09124,Rajesh Kumar,9811223344,0x71c8901b2c45e89d1234a567b8901234cde56781,5180000.0,Telegram Crypto Investment Fraud,2026-09-14
+NCRP/2026/MUM/08812,Pooja Mehta,9822334455,0x71c8901b2c45e89d1234a567b8901234cde56781,2500000.0,Fake Mining Pool Scam,2026-09-14
+NCRP/2026/BLR/04118,Siddharth Sen,9833445566,0x5555555555555555555555555555555555555555,1400000.0,Part-Time Job Task Crypto Scam,2026-09-18

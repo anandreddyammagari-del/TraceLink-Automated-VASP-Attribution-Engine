@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "chain_name": "eth-mainnet",
+  "items": [
+    {
+      "tx_hash": "0xaa12894cd87123efb67192834019283019283019283019283019283019283011",
+      "from_address": "0x1111111111111111111111111111111111111111",
+      "to_address": "0x71c8901b2c45e89d1234a567b8901234cde56781",
+      "value": "18500000000000000000",
+      "value_quote": 62900.0,
+      "block_signed_at": "2026-09-14T18:46:17Z",
+      "successful": true
+    },
+    {
+      "tx_hash": "0xbb23905de98234fac78203945120394120394120394120394120394120394122",
+      "from_address": "0x71c8901b2c45e89d1234a567b8901234cde56781",
+      "to_address": "0x3a918273645bcef890123456789abcdef1234567",
+      "value": "12000000000000000000",
+      "value_quote": 40800.0,
+      "block_signed_at": "2026-09-15T00:46:17Z",
+      "successful": true
+    },
+    {
+      "tx_hash": "0xcc34016ef09345abd89314056231405231405231405231405231405231405233",
+      "from_address": "0x3a918273645bcef890123456789abcdef1234567",
+      "to_address": "0x89ab12cd34ef5678901234567890abcdef123456",
+      "value": "8500000000000000000",
+      "value_quote": 28900.0,
+      "block_signed_at": "2026-09-16T04:46:17Z",
+      "successful": true
+    },
+    {
+      "tx_hash": "0xdd45127fa10456bce90425167342516342516342516342516342516342516344",
+      "from_address": "0x89ab12cd34ef5678901234567890abcdef123456",
+      "to_address": "0x503828976d22510aad0201ac7ec88293211d23dc",
+      "value": "8200000000000000000",
+      "value_quote": 27880.0,
+      "block_signed_at": "2026-09-17T12:46:17Z",
+      "successful": true
+    }
+  ]
+}

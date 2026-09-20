@@ -1,0 +1,6 @@
+wallet_address,list_source,entity_name,program,remarks
+0x1da5821544e25c636c1417ba96ade4cf6d2f9b5a,OFAC_SDN,Lazarus Group Hacker Vault,DPRK,DPRK Cyber Operations Primary
+0x7f367cc41522ce07553e823bf3be79a889debe1b,OFAC_SDN,Tornado Cash Router Contract,CYBER2,OFAC Designated Smart Contract
+0xd90e2f925da726b50c4ed8d0fb90ad053324f31b,OFAC_SDN,Tornado Cash Relayer Proxy,CYBER2,Sanctioned Mixing Relayer
+0x8576acc5c05d6ce88f4e49bf65bdf0c62f91353c,OFAC_SDN,Garantex Exchange Deposit,RUSSIA,Russian Sanctioned Exchange
+0xb9886a111a938c112b32943b0fc42f4c9c614bbf,CHAINABUSE,Telegram Phishing Ring Collector,PHISHING,Reported in 14 State NCRP Complaints
